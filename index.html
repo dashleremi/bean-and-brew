@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Top Nav Bar -->
+     <header>
+     <div class="topnav">
+        <div class="nav-left"><h2>Bean & Brew</h2></div>
+        <a class= "active" href="#home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Coffee">Coffee</a>
+        <a href="#Quiz">Quiz</a>
+        <a href="#Contact">Contact</a>
+     </div></header>
+
+     <main>
+        <!-- Hero Section, home page -->
+        <section id="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>Caffeinated Knowledge: <br>
+                Your Coffee Learning Experience.</h1>
+                <p>From bean to cup, learn everything about coffee. Discover different coffee types, <br> brewing methods, and recipes to make the perfect brew every time.</p>
+                <div class="cta-buttons"> 
+                    <a href="#coffee-knowledge" class="btn btn-primary">Start Learning</a>
+                    <a href="#recipes" class="btn btn-secondary">Explore Recipes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section -->
+         <section id="about">
+            <a href="#about" class="section-link">About</a>
+            <h2>Welcome to <span>Bean & Brew!</span></h2>
+            <p>Passionate about educating coffee enthusiasts and provide comprehensive knowledge on coffee, <br> 
+            from bean selection to brewing methods.</p>
+            <br>
+            <p>The journey began with a simple love for coffee. As different flavors and techniques were explored, the <br>
+            need for a dedicated platform to share this knowledge became apparent. My goal is to create user-friendly, <br> 
+            comprehensive coffee learning resources online, continually expanding the content and features.</p>
+         </section>
+
+         <!-- Coffee Knowledge Section -->
+          <section id="coffee-knowledge">
+            <a href="#coffee" class="coffee-link">Coffee Knowledge</a>
+
+            <div class="content-block-left">
+                <img src="/images/coffee-type.png" alt="Types of Coffee">
+                <div clss="content-info">
+                    <h3>TYPES OF COFFEE</h3>
+                    <p>Explore a variety of coffee types with detailed descriptions and images. 
+                    Learn about the unique characteristics <br> and flavors of each coffee drink, from espresso to
+                cappuccino and beyond.</p>
+                <a href="#types-of-coffee" class="btn btn-explore">Explore</a>
+                </div>
+            </div>
+
+            <div class="content-block-right">
+                <img src="/images/brewing-method.png" alt="Brewing Methods">
+                <div class="content-info">
+                    <h3> BREWING METHODS</h3>
+                    <p>Discover different coffee brewing methods with step-by-step tutorials. Whether it's a French press, pour-over,<br>
+                    or an espresso machine. Find out how to brew the perfect cup every time.</p>
+                    <a href="#brewing-methods" class="btn btn-explore">Explore</a>
+                </div>
+                
+            </div>
+
+            <div class="content-block-left">
+                <img src="/images/coffee-bean.png" alt="Coffee Beans">
+                <div clss="content-info">
+                    <h3>COFFEE BEANS</h3>
+                    <p>Get to know different types of coffee beans, their origins, and flavor profiles. <br> 
+                        Understand how the choice of beans impacts the taste of your coffee and make informed decisions for your brews.</p>
+                    <a href="#coffee-beans" class="btn btn-explore">Explore</a>
+                </div>
+            </div>
+
+            <div class="content-block-right">
+                <img src="/images/coffee-recipe.png" alt="Coffee Recipe">
+                <div clss="content-info">
+                    <h3>RECIPES</h3>
+                    <p>Find a collection of coffee recipes, including classic drinks and creative coffee-based beverages. Follow detailed <br>
+                        instructions to create delicious coffee drinks at home.</p>
+                    <a href="#recipes" class="btn btn-explore">Explore</a>
+                </div>
+            </div>
+
+
+          </section>
+
+          <!-- Coffee Quiz Section -->
+           <section id="coffee-quiz">
+           <a href="#quiz" class="quiz-link">Coffee Quiz</a> 
+
+           <div class="quiz-conotainer">
+            <div class="quiz-info">
+            <h2>Coffee Personality Quiz</h2>
+            <p>Take this quick quiz to find out which coffee suits your taste preferences best!</p>
+
+            </div>
+           <!-- Question 1 -->
+           <div class="quiz-content">
+            <div class="quiz-page" id="quiz-page-1">
+                <h4>Question 1:</h4>
+                <p>How much caffeine do you enjoy in your coffee?</p>
+                <input type="radio" name="q1" value="light"> Light<br>
+                <input type="radio" name="q1" value="moderate"> Moderate<br>
+                <input type="radio" name="q1" value="high"> High<br>
+                <button onclick="nextPage(2)">Next</button>
+            </div>
+           <!-- Question 2 -->
+           <div class="quiz-page" id="quiz-page-2" style="display:none;">
+            <h4>Question 2:</h4>
+            <p>How dark do you like your coffee beans?</p>
+            <input type="radio" name="q2" value="light"> Light Roast<br>
+            <input type="radio" name="q2" value="medium"> Medium Roast<br>
+            <input type="radio" name="q2" value="dark"> Dark Roast<br>
+            <button onclick="prevPage(1)">Previous</button>
+            <button onclick="nextPage(3)">Next</button>
+        </div>
+        <!-- Question 3 -->
+        <div class="quiz-page" id="quiz-page-3" style="display:none;">
+            <h4>Question 3:</h4>
+            <p>How dark do you like your coffee beans?</p>
+            <input type="radio" name="q2" value="light"> Light Roast<br>
+            <input type="radio" name="q2" value="medium"> Medium Roast<br>
+            <input type="radio" name="q2" value="dark"> Dark Roast<br>
+            <button onclick="prevPage(2)">Previous</button>
+            <button onclick="nextPage(4)">Next</button>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-page" id="quiz-page-4" style="display:none;">
+            <h4>Question 4:</h4>
+            <p>How dark do you like your coffee beans?</p>
+            <input type="radio" name="q2" value="light"> Light Roast<br>
+            <input type="radio" name="q2" value="medium"> Medium Roast<br>
+            <input type="radio" name="q2" value="dark"> Dark Roast<br>
+            <button onclick="prevPage(3)">Previous</button>
+            <button onclick="nextPage(5)">Next</button>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="quiz-page" id="quiz-page-5" style="display:none;">
+            <h4>Question 5:</h4>
+            <p>How dark do you like your coffee beans?</p>
+            <input type="radio" name="q2" value="light"> Light Roast<br>
+            <input type="radio" name="q2" value="medium"> Medium Roast<br>
+            <input type="radio" name="q2" value="dark"> Dark Roast<br>
+            <button onclick="prevPage(4)">Previous</button>
+            <button onclick="nextPage(6)">Next</button>
+        </div>
+        <!-- Question 6 -->
+
+        <div class="quiz-page" id="quiz-page-6" style="display:none;">
+            <h4>Question 6:</h4>
+            <p>How dark do you like your coffee beans?</p>
+            <input type="radio" name="q2" value="light"> Light Roast<br>
+            <input type="radio" name="q2" value="medium"> Medium Roast<br>
+            <input type="radio" name="q2" value="dark"> Dark Roast<br>
+            <button onclick="prevPage(5)">Previous</button>
+            <button onclick="nextPage(7)">Next</button>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="quiz-page" id="quiz-page-7" style="display:none;">
+            <h4>Question 7:</h4>
+            <p>When is your favorite time to drink coffee?</p>
+            <input type="radio" name="q7" value="morning"> Morning<br>
+            <input type="radio" name="q7" value="afternoon"> Afternoon<br>
+            <input type="radio" name="q7" value="evening"> Evening<br>
+            <input type="radio" name="q7" value="anytime"> Anytime<br>
+            <button onclick="prevPage(6)">Previous</button>
+            <button onclick="showResults()">Submit</button>
+        </div>
+    </div>
+</div>
+
+           </section>
+          
+     </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
